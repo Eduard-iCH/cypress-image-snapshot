@@ -1,3 +1,3 @@
-import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
+import { addMatchImageSnapshotCommand } from '@duplotech/cypress-image-snapshot/command';
 
 addMatchImageSnapshotCommand();

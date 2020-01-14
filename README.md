@@ -1,4 +1,6 @@
-# Cypress Image Snapshot
+# `@duplotech/cypress-image-snapshot`
+
+This is a fork of [`cypress-image-snapshot`](https://github.com/palmerhq/cypress-image-snapshot) which [doesn't appear to be maintained any longer](https://github.com/palmerhq/cypress-image-snapshot/pull/96#issuecomment-570863372). I don't plan to actively write code for it, however I will do my best to merge pull requests with fixes and features. And, after your first contribution, we will add you as a member to the repo so you can merge pull requests and help steer the ship 🚢 You can [read more details about this here](#contributing).
 
 Cypress Image Snapshot binds [jest-image-snapshot](https://github.com/americanexpress/jest-image-snapshot)'s image diffing logic to [Cypress.io](https://cypress.io) commands. **The goal is to catch visual regressions during integration tests.**
 
@@ -30,7 +32,7 @@ When using `cypress run` and `--reporter cypress-image-snapshot/reporter`, diffs
 Install from npm
 
 ```bash
-npm install --save-dev cypress-image-snapshot
+npm install --save-dev @duplotech/cypress-image-snapshot
 ```
 
 then add the following in your project's `<rootDir>/cypress/plugins/index.js`:
@@ -38,7 +40,7 @@ then add the following in your project's `<rootDir>/cypress/plugins/index.js`:
 ```js
 const {
   addMatchImageSnapshotPlugin,
-} = require('cypress-image-snapshot/plugin');
+} = require('@duplotech/cypress-image-snapshot/plugin');
 
 module.exports = (on, config) => {
   addMatchImageSnapshotPlugin(on, config);
@@ -48,7 +50,7 @@ module.exports = (on, config) => {
 and in `<rootDir>/cypress/support/commands.js` add:
 
 ```js
-import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
+import { addMatchImageSnapshotCommand } from '@duplotech/cypress-image-snapshot/command';
 
 addMatchImageSnapshotCommand();
 ```
@@ -189,4 +191,23 @@ The workflow of `cy.matchImageSnapshot()` when running Cypress is:
 Cypress's screenshot functionality has changed significantly across `3.x.x` versions. In order to avoid buggy behavior, please use the following version ranges:
 
 - `cypress-image-snapshot@>=1.0.0 <2.0.0` for `cypress@>=3.0.0 <3.0.2`
-- `cypress-image-snapshot@>2.0.0` for `cypress@>3.0.2`.
+- `@duplotech/cypress-image-snapshot@>2.0.0` for `cypress@>3.0.2`.
+
+## Contributing
+
+Hey! Do you like `@duplotech/cypress-image-snapshot`? Awesome! We could actually really use your help!
+
+Open source isn't just writing code. We could use your help with any of the
+following:
+
+- Finding (and reporting!) bugs.
+- New feature suggestions.
+- Answering questions on issues.
+- Documentation improvements.
+- Reviewing pull requests.
+- Helping to manage issue priorities.
+- Fixing bugs/new features.
+
+If any of that sounds cool to you, send a pull request! After your first
+contribution, we will add you as a member to the repo so you can merge pull
+requests and help steer the ship :ship: You can read more details about that [in our contributor guidelines](./CONTRIBUTING.md).
