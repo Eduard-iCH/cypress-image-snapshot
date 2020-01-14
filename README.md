@@ -1,6 +1,6 @@
 # `@duplotech/cypress-image-snapshot`
 
-This is a fork of [`cypress-image-snapshot`](https://github.com/palmerhq/cypress-image-snapshot) which [doesn't appear to be maintained any longer](https://github.com/palmerhq/cypress-image-snapshot/pull/96#issuecomment-570863372). I don't plan to actively write code for it, however I will do my best to merge pull requests with fixes and features. And, after your first contribution, we will add you as a member to the repo so you can merge pull requests and help steer the ship 🚢 You can [read more details about this here](#contributing).
+This is a fork of [`cypress-image-snapshot`](https://github.com/palmerhq/cypress-image-snapshot) which [doesn't appear to be maintained any longer](https://github.com/palmerhq/cypress-image-snapshot/pull/96#issuecomment-570863372). I don't plan to actively write code for it, however I will do my best to merge pull requests with fixes and features. And, after your first contribution, we will add you as a member to the repo so you can merge pull requests and help steer the ship 🚢. You can [read more details about this here](#contributing).
 
 Cypress Image Snapshot binds [jest-image-snapshot](https://github.com/americanexpress/jest-image-snapshot)'s image diffing logic to [Cypress.io](https://cypress.io) commands. **The goal is to catch visual regressions during integration tests.**
 
