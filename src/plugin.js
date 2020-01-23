@@ -104,6 +104,15 @@ export function matchImageSnapshotPlugin({ path: screenshotPath }) {
     fs.copySync(snapshotDotPath, snapshotKebabPath);
   }
 
+  // Eduard-iCH: Дополнительно копируем файлы в нашу подпапку для возможности ручной замены снэпшотов взамен стандартного механизма
+  let snapshotsLastDir = snapshotsDir.replace('/' + relativePath, '') + 'Last/';
+  let snapshotLastPath = path.join(
+    snapshotsLastDir,
+    relativePath,
+    path.win32.basename(snapshotDotPath)
+  );
+  fs.copySync(screenshotPath, snapshotLastPath);
+
   snapshotResult = diffImageToSnapshot({
     snapshotsDir,
     diffDir,

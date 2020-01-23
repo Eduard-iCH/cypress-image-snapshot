@@ -1,3 +1,8 @@
+## Отличия от оригинального пакета (искать в коде по коммитам или по слову Eduard-iCH)
+
+1. Все сделанные скриншоты перед удалением копируются в папку \<snapshotsDir\>Last для возможности реализации ручной замены эталонов
+----
+
 # `@duplotech/cypress-image-snapshot`
 
 This is a fork of [`cypress-image-snapshot`](https://github.com/palmerhq/cypress-image-snapshot) which [doesn't appear to be maintained any longer](https://github.com/palmerhq/cypress-image-snapshot/pull/96#issuecomment-570863372). I don't plan to actively write code for it, however I will do my best to merge pull requests with fixes and features. And, after your first contribution, we will add you as a member to the repo so you can merge pull requests and help steer the ship 🚢. You can [read more details about this here](#contributing).
