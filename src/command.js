@@ -30,6 +30,16 @@ export function matchImageSnapshotCommand(defaultOptions) {
     const target = subject ? cy.wrap(subject) : cy;
     target.screenshot(name, options);
 
+    if (options.elRemoveAfter) {
+      // Eduard-iCH: "Удалить" элемент после снятия скриншота
+      target.invoke('css', 'display', 'none');
+    }
+
+    if (options.elHideAfter) {
+      // Eduard-iCH: Сделать невидимым элемент после снятия скриншота
+      target.invoke('css', 'visibility', 'hidden');
+    }
+
     return cy
       .task(RECORD)
       .then(
