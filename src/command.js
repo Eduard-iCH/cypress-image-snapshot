@@ -28,6 +28,13 @@ export function matchImageSnapshotCommand(defaultOptions) {
 
     const name = typeof maybeName === 'string' ? maybeName : undefined;
     const target = subject ? cy.wrap(subject) : cy;
+
+    if (options.elScrollToAndWaitFor) {
+      // Eduard-iCH: Проскроллить экран к элементу и задержаться на нём определённое время
+      target.scrollIntoView();
+      target.wait(options.elScrollToAndWaitFor);
+    }
+
     target.screenshot(name, options);
 
     if (options.elRemoveAfter) {
